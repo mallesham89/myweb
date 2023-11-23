@@ -17,6 +17,7 @@ pipeline{
             steps{
                 sh "mvn clean sonar:sonar package"
                 
+                
             }
         }
         stage('Upload War To Nexus'){
