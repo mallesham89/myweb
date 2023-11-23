@@ -10,13 +10,12 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps{
-                git credentialsId: 'javahome2', url: 'https://github.com/mallesham89/myweb.git'
+                git credentialsId: 'javahome2', url: 'https://github.com/srinicloud87/myweb.git'
             }
         }
         stage("Maven Build"){
             steps{
                 sh "mvn clean sonar:sonar package"
-                
                 
             }
         }
