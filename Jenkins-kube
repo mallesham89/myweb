@@ -15,7 +15,8 @@ pipeline{
         }
         stage("Maven Build"){
             steps{
-                sh "clean sonar:sonar package"
+                sh "mvn clean package"
+                
             }
         }
         stage('Upload War To Nexus'){
